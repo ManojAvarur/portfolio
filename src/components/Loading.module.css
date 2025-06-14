@@ -1,0 +1,78 @@
+svg.logo>line,
+svg.logo>path {
+    stroke: black;
+    fill: none;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: draw 2s ease forwards;
+}
+
+svg line:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+svg line:nth-of-type(2) {
+    animation-delay: 0.1s;
+}
+
+svg line:nth-of-type(3) {
+    animation-delay: 0.2s;
+}
+
+svg path:nth-of-type(1) {
+    animation-delay: 0.3s;
+}
+
+svg line:nth-of-type(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@property --background-rotation {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.backdrop {
+    /* --rotate is declared in Loading.tsx under tailwind classnames */
+    animation: zoomout 1.5s ease-in-out 1 forwards;
+    animation-delay: .5s;
+    --background-rotation: 0deg;
+    background: linear-gradient(
+        var(--background-rotation),
+        rgba(251, 133, 0, 0.66) 0%,
+        rgba(164, 162, 82, 1) 20%,
+        rgba(75, 192, 167, 1) 40%,
+        rgba(33, 158, 188, 1) 60%,
+        rgba(142, 202, 230, 1) 80%,
+        rgba(118, 175, 202, 1) 100%,
+        rgba(2, 48, 71, 0.63) 100%
+    );
+}
+
+@keyframes zoomout {
+    0% {
+        transform: rotate(0deg);
+        --background-rotation: 0deg;
+    }
+
+    50% {
+        transform: rotate(var(--rotate));
+    }
+
+    60% {
+        transform: scale(1)  rotate(var(--rotate));
+
+    }
+
+    100% {
+        transform: scale(5)  rotate(var(--rotate));
+        --background-rotation: 50deg;
+    }
+}
