@@ -1,6 +1,6 @@
 svg.logo>line,
 svg.logo>path {
-    stroke: black;
+    stroke: var(--color-nyanza);
     fill: none;
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
@@ -41,10 +41,18 @@ svg line:nth-of-type(4) {
 
 .backdrop {
     /* --rotate is declared in Loading.tsx under tailwind classnames */
-    animation: zoomout 1.5s ease-in-out 1 forwards;
-    animation-delay: .5s;
+    animation: zoomout 2s ease-in-out 1 forwards;
+    /* animation-delay: .5s; */
     --background-rotation: 0deg;
     background: linear-gradient(
+        var(--background-rotation),
+        var(--color-dark-purple) 20%,
+        var(--color-nyanza) 40%,
+        var(--color-bole) 60%,
+        var(--color-chamoisee) 80%,
+        var(--color-raisin-black) 100%
+    );
+    /* background: linear-gradient(
         var(--background-rotation),
         rgba(251, 133, 0, 0.66) 0%,
         rgba(164, 162, 82, 1) 20%,
@@ -53,7 +61,7 @@ svg line:nth-of-type(4) {
         rgba(142, 202, 230, 1) 80%,
         rgba(118, 175, 202, 1) 100%,
         rgba(2, 48, 71, 0.63) 100%
-    );
+    ); */
 }
 
 @keyframes zoomout {
@@ -73,6 +81,6 @@ svg line:nth-of-type(4) {
 
     100% {
         transform: scale(5)  rotate(var(--rotate));
-        --background-rotation: 50deg;
+        --background-rotation: 90deg;
     }
 }

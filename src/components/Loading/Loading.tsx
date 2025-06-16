@@ -1,19 +1,20 @@
-import styles from "./Loading.module.css"
+// Functional Imports
 import React from "react";
+
+// Style Imports
+import styles from "./Loading.module.css"
 
 type LoadingProps = {
     onComplete?: React.AnimationEventHandler<HTMLDivElement>;
 };
 
-
 export default function Loading({ onComplete }: LoadingProps){
 
     return (
-        <div className="max-h-screen overflow-hidden [--rotate:50deg] xs:[--rotate:54deg] sm:[--rotate:70deg]">
-            <div className={`h-[100vh] backdrop-blur-lg ${styles.backdrop}`} onAnimationEnd={onComplete} />
-            {/* <div className={`h-[100vh] bg-linear-to-r/decreasing from-indigo-500 to-teal-400 backdrop-blur-xl ${styles.backdrop}`} onAnimationEnd={onComplete} /> */}
+        <div className="max-h-screen overflow-hidden [--rotate:50deg]  sm:[--rotate:70deg]">
+            <div className={`h-[100vh] backdrop-blur-lg opacity-50 ${styles.backdrop}`} onAnimationEnd={onComplete} />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <svg className={`${styles.logo} rotate-[calc(360deg-var(--rotates))] [--logo-stroke-width:4] w-xs sm:w-lg`} width="594" height="209" viewBox="0 0 594 209" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={`${styles.logo} glass-effect m-100 p-1 rounded-2xl [--logo-stroke-width:4] w-xs sm:w-lg`} width="594" height="209" viewBox="0 0 594 209" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line className="stroke-(length:--logo-stroke-width)" y1="-0.5" x2="324.24" y2="-0.5" transform="matrix(0.770994 -0.636843 0.586538 0.809922 1 207.82)" />
                     <line className="stroke-(length:--logo-stroke-width)" y1="-0.5" x2="74.4846" y2="-0.5" transform="matrix(0.999803 0.0198655 -0.0174177 0.999848 250.517 1)" />
                     <path className="stroke-(length:--logo-stroke-width)" d="M325 66L323.988 209" />

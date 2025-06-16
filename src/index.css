@@ -37,32 +37,105 @@
     font-family: "Silkscreen", serif, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
-    
+
     /* color-scheme: light dark; */
-    
+
     font-synthesis: none;
-    
+
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Color Palatte https://coolors.co/palette/8ecae6-219ebc-023047-ffb703-fb8500 */
-@theme{
+@theme {
+    /*
+        sm	40rem (640px)	@media (width >= 40rem) 
+        md	48rem (768px)	@media (width >= 48rem)
+        lg	64rem (1024px)	@media (width >= 64rem) 
+        xl	80rem (1280px)	@media (width >= 80rem)
+        2xl	96rem (1536px)	@media (width >= 96rem)
+    */
     --breakpoint-2xs: 30rem;
     --breakpoint-xs: 30rem;
     --breakpoint-2xl: 100rem;
     --breakpoint-3xl: 120rem;
-    
+
+    /* New Color Palette: https://coolors.co/1f0318-e5f2c9-7f534b-8c705f-1e1a1d */
+    --color-dark-purple: #1F0318;
+    --color-nyanza: #e5f2c9;
+    --color-bole: #7F534B;
+    --color-chamoisee: #8C705F;
+    --color-raisin-black: #1E1A1D;
+
+    /* Old Color Palette: https://coolors.co/palette/8ecae6-219ebc-023047-ffb703-fb8500*/
     --color-flush-orange: #FB8500;
     --color-selective-yellow: #FFB703;
     --color-green-vogue: #023047;
+    --color-keppel: #3EB3AF;
     --color-eastern-blue: #219EBC;
     --color-cornflower: #8ECAE6;
 }
 
-body {
+@layer components {
+    .glass-effect {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.1);
+        /* border-radius: 16px; */
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10.1px);
+        -webkit-backdrop-filter: blur(10.1px);
+
+
+        /* background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(50px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3); */
+    }
+
+    .hover-underline-animation {
+        display: inline-block;
+        position: relative;
+    }
+
+    .hover-underline-animation::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(
+            70deg,
+            var(--color-dark-purple) 20%,
+            var(--color-nyanza) 40%,
+            var(--color-bole) 60%,
+            var(--color-chamoisee) 80%,
+            var(--color-raisin-black) 100%
+        );
+        /* background-color: #0087ca; */
+        transition: transform 0.25s ease-out;
+    }
+
+    .hover-underline-animation:hover{
+        transform: translateY(-1px);
+    }
     
+    .hover-underline-animation::after {
+        transform-origin: bottom left;
+    }
+
+    .hover-underline-animation:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom right;
+    }
+
+}
+
+body {
+    background-color: #121212;
+    border-color: var(--color-keppel);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -70,7 +143,7 @@ body {
         color: #213547;
         background-color: #ffffff;
     }
-	
+
     button {
         background-color: #f9f9f9;
     }
