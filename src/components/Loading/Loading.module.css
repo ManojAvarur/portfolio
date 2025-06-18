@@ -42,7 +42,7 @@ svg line:nth-of-type(4) {
 .backdrop {
     /* --rotate is declared in Loading.tsx under tailwind classnames */
     animation: zoomout 2s ease-in-out 1 forwards;
-    /* animation-delay: .5s; */
+    /* animation-delay: .4s; */
     --background-rotation: 0deg;
     background: linear-gradient(
         var(--background-rotation),
