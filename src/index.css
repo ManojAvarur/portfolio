@@ -1,25 +1,27 @@
 @import 'tailwindcss';
 
-/* @font-face {
+/*
+@font-face {
     font-family: "IndieFlower";
     src: url("./assets/fonts/Indie_Flower/IndieFlower-Regular.ttf") format('truetype');
     
 }
 
 @font-face {
+    font-family: "Schoolbell";
+    src: url("./assets/fonts/Schoolbell/Schoolbell-Regular.ttf") format('truetype');
+} 
+
+@font-face {
     font-family: "PressStart2P";
     src: url("./assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf") format('truetype');
 }
+*/
 
 @font-face {
     font-family: "ReenieBeanie";
     src: url("./assets/fonts/Reenie_Beanie/ReenieBeanie-Regular.ttf") format('truetype');
 }
-
-@font-face {
-    font-family: "Schoolbell";
-    src: url("./assets/fonts/Schoolbell/Schoolbell-Regular.ttf") format('truetype');
-} */
 
 @font-face {
     font-family: "Silkscreen";
@@ -55,9 +57,7 @@
         xl	80rem (1280px)	@media (width >= 80rem)
         2xl	96rem (1536px)	@media (width >= 96rem)
     */
-    --breakpoint-2xs: 30rem;
     --breakpoint-xs: 30rem;
-    --breakpoint-2xl: 100rem;
     --breakpoint-3xl: 120rem;
 
     /* New Color Palette: https://coolors.co/1f0318-e5f2c9-7f534b-8c705f-1e1a1d */
@@ -78,14 +78,12 @@
 
 @layer components {
     .glass-effect {
-        /* From https://css.glass */
         background: rgba(255, 255, 255, 0.1);
-        /* border-radius: 16px; */
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(10.1px);
         -webkit-backdrop-filter: blur(10.1px);
 
-
+        /* Old Style */
         /* background: rgba(255, 255, 255, 0.2);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(50px);
@@ -131,6 +129,16 @@
         transform-origin: bottom right;
     }
 
+    .custom-linear-gradient-bg-img {
+        background-image: linear-gradient(
+            70deg,
+            var(--color-dark-purple) 20%,
+            var(--color-nyanza) 40%,
+            var(--color-bole) 60%,
+            var(--color-chamoisee) 80%,
+            var(--color-raisin-black) 100%
+        );
+    }
 }
 
 body {
@@ -144,7 +152,7 @@ body {
         background-color: #ffffff;
     }
 
-    button {
+    /* button {
         background-color: #f9f9f9;
-    }
+    } */
 }
