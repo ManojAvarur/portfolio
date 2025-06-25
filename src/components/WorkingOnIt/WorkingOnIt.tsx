@@ -38,7 +38,7 @@ export default function WorkingOnIt({ onComplete }: LoadingProps){
                 <div className={"absolute glass-effect rounded-2xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[50%] " + styles['main-content']}>
                     {!isLoading && (
                         <>
-                            <p ref={pTagRef} className="text-4xl lg:text-6xl text-left font-bold italic text-raisin-black m-2.5 font-[ReenieBeanie]">
+                            <p ref={pTagRef} className="text-4xl lg:text-6xl text-left font-bold italic text-raisin-black m-2.5 font-[IndieFlower]">
                                 🚧 Oops! My portfolio website is getting a makeover right now (turns out, building it takes longer than expected!). 
                                 <br /> 
                                 <br /> 

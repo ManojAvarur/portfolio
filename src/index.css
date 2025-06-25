@@ -1,12 +1,13 @@
 @import 'tailwindcss';
 
-/*
+
 @font-face {
     font-family: "IndieFlower";
     src: url("./assets/fonts/Indie_Flower/IndieFlower-Regular.ttf") format('truetype');
     
 }
 
+/*
 @font-face {
     font-family: "Schoolbell";
     src: url("./assets/fonts/Schoolbell/Schoolbell-Regular.ttf") format('truetype');
@@ -16,12 +17,12 @@
     font-family: "PressStart2P";
     src: url("./assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf") format('truetype');
 }
-*/
 
 @font-face {
     font-family: "ReenieBeanie";
     src: url("./assets/fonts/Reenie_Beanie/ReenieBeanie-Regular.ttf") format('truetype');
 }
+*/
 
 @font-face {
     font-family: "Silkscreen";
