@@ -5,9 +5,10 @@ import { useState } from "react";
 import Loading from "./components/Loading/Loading";
 import Main from "./components/Main/Main";
 import CursorTracker from "./components/CursorTracker/CursorTracker";
+import WorkingOnIt from "./components/WorkingOnIt/WorkingOnIt";
 
 export default function App() {
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     function onLoadingComplete(){
         // window.location.reload();
@@ -21,7 +22,7 @@ export default function App() {
                     <Loading onComplete={onLoadingComplete} /> : 
                     <>
                         <CursorTracker />
-                        <Main />
+                        {/* <WorkingOnIt /> */}
                     </>
             }
         </>

@@ -1,3 +1,7 @@
+body {
+    border: none;
+}
+
 svg.logo>line,
 svg.logo>path {
     stroke: var(--color-nyanza);
