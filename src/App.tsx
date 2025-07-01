@@ -8,7 +8,7 @@ import CursorTracker from "./components/CursorTracker/CursorTracker";
 import WorkingOnIt from "./components/WorkingOnIt/WorkingOnIt";
 
 export default function App() {
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
 
     function onLoadingComplete(){
         // window.location.reload();
@@ -22,7 +22,7 @@ export default function App() {
                     <Loading onComplete={onLoadingComplete} /> : 
                     <>
                         <CursorTracker />
-                        {/* <WorkingOnIt /> */}
+                        <Main />
                     </>
             }
         </>

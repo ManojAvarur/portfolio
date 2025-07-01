@@ -32,7 +32,7 @@ export default function MobileMenu({ mobileMenuOpen, setMobileMenuOpen }: Mobile
             className="lg:hidden"
         >
             <div className="fixed inset-0 z-50" />
-            <DialogPanel className={`fixed inset-0 z-50 w-full overflow-y-auto bg-yellow-200 menu open`} ref={dialogPannelRef} onAnimationEnd={animationEndHandler}>
+            <DialogPanel className={` bg-amber-200 menu`} ref={dialogPannelRef} onAnimationEnd={animationEndHandler}>
                 
             </DialogPanel>
         </Dialog>
