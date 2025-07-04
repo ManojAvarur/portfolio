@@ -6,21 +6,9 @@
     right: calc(var(--spacing) * 5);
     z-index: 50;
     border-radius: 100%;
-    /* absolute z-50 top-9 rounded-2xl right-5 w-5 h-5 bg-amber-200 */
+    animation: menuOpen 0.5s ease-in-out forwards;
 }
 
-
-
-/* .menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    transform-origin: top right;
-    pointer-events: none;
-    animation: menuClose 0.5s ease-in-out forwards;
-}
-*/
 .menu.open {
     animation: menuOpen 0.5s ease-in forwards;
     pointer-events: auto;
@@ -31,7 +19,7 @@
     from {
         /* width: calc(var(--spacing) * 5);
         height: calc(var(--spacing) * 5); */
-        transform: scale(1);
+        transform: scale(0);
     }
     to {
         /* width: 100vh;
@@ -42,7 +30,7 @@
 
 @keyframes menuClose {
     from {
-        transform: scale(1);
+        transform: scale(200);
     }
     to {
         transform: scale(0);

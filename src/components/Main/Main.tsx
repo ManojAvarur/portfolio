@@ -7,7 +7,7 @@ import styles from "./Main.module.css";
 import MobileMenu from "../MobileMenu/MobileMenu";
 
 export default function Main() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(true);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
         <>

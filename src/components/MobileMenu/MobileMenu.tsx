@@ -1,7 +1,7 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
 import final_logo from "../../assets/logos/final-logo.png";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import "./MobileMenu.css";
+import styles from "./MobileMenu.module.css";
 import { useEffect, useRef } from "react";
 
 
@@ -11,10 +11,10 @@ type MobileMenuPops = {
 }
 
 export default function MobileMenu({ mobileMenuOpen, setMobileMenuOpen }: MobileMenuPops) {
-    const dialogPannelRef = useRef<HTMLElement>(null);
+    const dialogPannelRef = useRef<HTMLDivElement>(null);
 
     function animationEndHandler(){
-        if(dialogPannelRef.current?.classList.contains('open')){
+        if(dialogPannelRef.current?.classList.contains(styles.open)){
             return
         }
 
@@ -32,8 +32,22 @@ export default function MobileMenu({ mobileMenuOpen, setMobileMenuOpen }: Mobile
             className="lg:hidden"
         >
             <div className="fixed inset-0 z-50" />
-            <DialogPanel className={` bg-amber-200 menu`} ref={dialogPannelRef} onAnimationEnd={animationEndHandler}>
-                
+            <div className={`bg-amber-900 ${styles.menu} ${styles.open}`} ref={dialogPannelRef} onAnimationEnd={animationEndHandler} />
+            <DialogPanel className="relative z-60">
+                <div className="flex items-center justify-between">
+                    <a href="#">
+                        <span className="sr-only">Your Company</span>
+                        <img alt="" src={final_logo} className="h-8 w-auto" />
+                    </a>
+                    <button
+                        type="button"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="-m-2.5 rounded-md p-2.5 text-nyanza cursor-pointer"
+                    >
+                        <span className="sr-only">Close menu</span>
+                        <XMarkIcon aria-hidden="true" className="size-6" />
+                    </button>
+                </div>
             </DialogPanel>
         </Dialog>
     )
