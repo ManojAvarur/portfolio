@@ -53,7 +53,7 @@ export default function Main() {
                             </a>
                             <a href="#" className="-m-1.5 p-1.5 hover:cursor-pointer">
                                 <span className="sr-only">Manoj | Portfolio</span>
-                                <img alt="" src={final_logo} className="h-24 w-25" />
+                                <img alt="Logo" src={final_logo} className="h-24 w-25" />
                             </a>
                             <a
                                 href="#"
