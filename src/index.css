@@ -74,6 +74,32 @@
     --color-keppel: #3EB3AF;
     --color-eastern-blue: #219EBC;
     --color-cornflower: #8ECAE6;
+
+    /* Animation for sliding up the main content */
+    --animate-slide-in: slideIn .5s ease-out forwards;
+    --animate-slide-out: slideOut .3s ease-out forwards;
+
+    @keyframes slideIn {
+        from {
+            /* transform: translateZ(100%); */
+            opacity: 0;
+        }
+        to {
+            /* transform: translateZ(0); */
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOut {
+        from {
+            /* transform: translateZ(0); */
+            opacity: 1;
+        }
+        to {
+            /* transform: translateZ(100%); */
+            opacity: 0; 
+        }
+    }
 }
 
 @layer components {
