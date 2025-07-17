@@ -2,20 +2,6 @@
 .main-content {
     font-size: 2rem;
     font-weight: bold;
-    animation: slideIn 1s ease-out forwards;
-}
-
-/* Animation for sliding up the main content */
-@keyframes slideIn {
-    0% {
-        transform: translatez(100%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translatez(0);
-        opacity: 1;
-    }
 }
 
 .ping {
