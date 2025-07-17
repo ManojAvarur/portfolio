@@ -32,7 +32,7 @@ export default function WorkingOnIt(){
             <div className="max-h-screen overflow-hidden [--rotate:50deg] sm:[--rotate:70deg]">
                 <div className={`h-[100vh] backdrop-blur-lg opacity-50 custom-linear-gradient-bg-img rotate-[var(--rotate)] scale-[5]`} />
                 <div className={"absolute glass-effect rounded-2xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[50%] " + styles['main-content']}>
-                    <p className="text-4xl lg:text-6xl text-left font-bold italic text-raisin-black m-2.5 font-[IndieFlower]">
+                    <p className="text-xl md:text-4xl 2xl:text-6xl text-left font-bold italic text-raisin-black m-2.5 font-[IndieFlower]">
                         🚧 Oops! My portfolio website is getting a makeover right now (turns out, building it takes longer than expected!). 
                         <br /> 
                         <br /> 
