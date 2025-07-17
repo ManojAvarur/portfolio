@@ -13,7 +13,7 @@ export default function Loading({ onComplete }: LoadingProps){
     return (
         <>
             <div className="max-h-screen overflow-hidden [--rotate:50deg] sm:[--rotate:70deg]">
-                <div className={`h-[100vh] backdrop-blur-lg opacity-50 ${styles.backdrop}`} onAnimationEnd={onComplete} />
+                <div className={`h-[100vh] backdrop-blur-lg opacity-50 transform-gpu ${styles.backdrop}`} onAnimationEnd={onComplete} />
                 <div className="absolute rounded-2xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                     <svg className={`${styles.logo} [--logo-stroke-width:4] w-sm md:w-lg`} viewBox="0 0 594 209" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line className="stroke-(length:--logo-stroke-width)" y1="-0.5" x2="324.24" y2="-0.5" transform="matrix(0.770994 -0.636843 0.586538 0.809922 1 207.82)" />
