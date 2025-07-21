@@ -44,13 +44,13 @@ export default function MobileMenu({ mobileMenuOpen, setMobileMenuOpen }: Mobile
             className="lg:hidden"
         >
             {/* <div className="fixed inset-0 z-50" /> */}
-            <div className={`bg-chamoisee transform-gpu ${styles.menu} ${styles.open}`} ref={dialogPannelRef} onAnimationEnd={animationEndHandler} />
+            <div className={`bg-chamoisee transform-gpu max-w-full max-h-full ${styles.menu} ${styles.open}`} ref={dialogPannelRef} onAnimationEnd={animationEndHandler} />
             <DialogPanel>
                 <div className="absolute top-0 left-1 z-50 w-full opacity-0" ref={headerContentRef}>
                     <div className="flex items-center justify-between px-5">
-                        <a href="#">
-                            <span className="sr-only">Your Company</span>
-                            <img alt="Logo" src={final_logo} className="w-25 h-auto" />
+                        <a href="https://manoj.dedyn.io">
+                            <span className="sr-only">Manoj's Portfolio icon</span>
+                            <img alt="AM Logo" src={final_logo} className="w-25 h-auto" />
                         </a>
                         <button
                             type="button"

@@ -52,8 +52,8 @@ export default function Main() {
                                 experience
                             </a>
                             <a href="#" className="-m-1.5 p-1.5 hover:cursor-pointer">
-                                <span className="sr-only">Manoj | Portfolio</span>
-                                <img alt="Logo" src={final_logo} className="h-24 w-25" />
+                                <span className="sr-only">Manoj's Portfolio icon</span>
+                                <img alt="AM Logo" src={final_logo} className="h-24 w-25" />
                             </a>
                             <a
                                 href="#"
