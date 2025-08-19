@@ -1,10 +1,9 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
-import final_logo from "../../assets/logos/final-logo.png";
+import finalLogo from "../../assets/logos/final-logo.png";
 import styles from "./Main.module.css";
 import MobileMenu from "../MobileMenu/MobileMenu";
+import computerImg from "../../assets/computer2.png";
 
 export default function Main() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -12,12 +11,12 @@ export default function Main() {
     return (
         <>
             {/* <div className="bg-dark"> */}
-                <header className="glass-effect sticky inset-x-0 top-0 z-50 bg-white/1">
+                <header className="glass-effect sticky inset-x-0 top-0 z-50 bg-white/1 animate-slide-in">
                     <nav aria-label="Global" className="overflow-hidden lg:px-8">
                         <div className="flex items-center justify-between p-1.5 lg:hidden">
                             <a href="#" className="">
                                 <span className="sr-only">Manoj | Portfolio</span>
-                                <img alt="Logo" src={final_logo} className="h-19 w-20" />
+                                <img alt="Logo" src={finalLogo} className="h-19 w-20" />
                             </a>
 
                             <div className="relative">
@@ -53,7 +52,7 @@ export default function Main() {
                             </a>
                             <a href="#" className="-m-1.5 p-1.5 hover:cursor-pointer">
                                 <span className="sr-only">Manoj's Portfolio icon</span>
-                                <img alt="AM Logo" src={final_logo} className="h-24 w-25" />
+                                <img alt="AM Logo" src={finalLogo} className="h-24 w-25" />
                             </a>
                             <a
                                 href="#"
@@ -79,8 +78,10 @@ export default function Main() {
                         className="relative left-[calc(90%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[var(--color-dark-purple)] via-[var(--color-nyanza)] via-[var(--color-bole)] via-[var(--color-chamoisee)] to-[var(--color-raisin-black)] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
                     />
                 </div>
+                <div className="    text-white">
+                    <img src={computerImg} className="w-full" />
 
-                
+                </div>
             </section>
         </>
 
