@@ -20,5 +20,5 @@ export default function CursorTracker(){
         return () => document.removeEventListener('mousemove', mouseMoveHandler)
     }, []);
 
-    return <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-3000 transition-all duration-300 lg:absolute" ref={divRef} />
+    return <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-3000 transition-all duration-300" ref={divRef} />
 }
